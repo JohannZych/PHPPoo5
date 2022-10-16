@@ -23,3 +23,5 @@ echo $truck->getLoading();
 echo $truck->forward();
 echo $truck->brake();
 var_dump($truck);
+
+
