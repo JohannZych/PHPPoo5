@@ -1,6 +1,6 @@
 <?php
 
-class HighWay
+abstract class HighWay
 {
     private array $currentVehicle;
     private int $nbLane;
