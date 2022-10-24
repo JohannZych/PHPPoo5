@@ -13,8 +13,16 @@ var_dump($bicycle);*/
 
 //----------Car----------
 $car = new Car('green', 4, 'electric');
-echo $car->start();
-echo $car->brake();
+try {
+    $this->start();
+} catch (Exception $e) {
+    echo "Exception : " , $e;
+    $this->setParkBrake();
+} finally {
+
+    return 'Ma voiture roule comme un donut';
+}
+
 var_dump($car);
 
 //---------Truck---------

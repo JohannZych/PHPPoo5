@@ -42,18 +42,11 @@ class Car extends Vehicle
 
     public function start()
     {
-        if ($this->isHasParkBrake() === false){
+        if ($this->isHasParkBrake() === true){
             throw new Exception('Park Brake');
         }
+        $this->forward();
 
-        try {
-            $this->forward();
-        } catch (Exception $e) {
-            echo "Exception : " , $e;
-        } finally {
-            $this->setParkBrake();
-            return 'Ma voiture roule comme un donut';
-        }
     }
 
 
